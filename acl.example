@@ -1,0 +1,17 @@
+# Total access
+user admin
+topic readwrite #
+topic readwrite $SYS/#
+
+# Send only data
+user capteur_salon
+topic write maison/salon/temperature
+
+# Receive command and give back status
+user ampoule_cuisine
+topic read maison/cuisine/lumiere/commande
+topic write maison/cuisine/lumiere/statut
+
+# global lecture for supervision
+user dashboard
+topic read maison/#
